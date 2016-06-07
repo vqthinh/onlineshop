@@ -5,11 +5,12 @@ using QTMvc5Shop.Model.Models;
 
 namespace QTMvc5Shop.Data.Repositories
 {
-    public interface IProductCategoryRepository
+    public interface IProductCategoryRepository : IRepository<ProductCategory>
     {
-        IEnumerable<ProductCategory> GetByAlias(string alias); 
+        IEnumerable<ProductCategory> GetByAlias(string alias);
     }
-    public class ProductCategoryRepository : RepositoryBase<ProductCategory>,IProductCategoryRepository
+
+    public class ProductCategoryRepository : RepositoryBase<ProductCategory>, IProductCategoryRepository
     {
         public ProductCategoryRepository(IDbFactory dbFactory)
             : base(dbFactory)
@@ -18,7 +19,7 @@ namespace QTMvc5Shop.Data.Repositories
 
         public IEnumerable<ProductCategory> GetByAlias(string alias)
         {
-            return DbContext.ProductCategories.Where(x => x.Alias == alias);
+            return this.DbContext.ProductCategories.Where(x => x.Alias == alias);
         }
     }
 }
