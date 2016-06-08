@@ -11,12 +11,13 @@ namespace QTMvc5Shop.Service
 {
     public interface IPostCategoryService
     {
-        void Add(PostCategory postCategory);
+        PostCategory Add(PostCategory postCategory);
         void Update(PostCategory postCategory);
-        void Delete(int id);
+        PostCategory Delete(int id);
         IEnumerable<PostCategory> GetAll();
         IEnumerable<PostCategory> GetAllByParentId(int parentId);
         PostCategory GetById(int id);
+        void Save();
     }
     public class PostCategoryService:IPostCategoryService
     {
@@ -28,9 +29,9 @@ namespace QTMvc5Shop.Service
             _postCategoryRepository = postCategoryRepository;
             _unitOfWork = unitOfWork;
         }
-        public void Add(PostCategory postCategory)
+        public PostCategory Add(PostCategory postCategory)
         {
-            _postCategoryRepository.Add(postCategory);
+            return _postCategoryRepository.Add(postCategory);
         }
 
         public void Update(PostCategory postCategory)
@@ -38,9 +39,9 @@ namespace QTMvc5Shop.Service
             _postCategoryRepository.Update(postCategory);
         }
 
-        public void Delete(int id)
+        public PostCategory Delete(int id)
         {
-            _postCategoryRepository.Delete(id);
+            return _postCategoryRepository.Delete(id);
         }
 
         public IEnumerable<PostCategory> GetAll()
@@ -56,6 +57,11 @@ namespace QTMvc5Shop.Service
         public PostCategory GetById(int id)
         {
             return _postCategoryRepository.GetSingleById(id);
+        }
+
+        public void Save()
+        {
+            _unitOfWork.Commit();
         }
     }
 }
