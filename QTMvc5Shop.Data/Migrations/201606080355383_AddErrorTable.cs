@@ -1,6 +1,5 @@
 namespace QTMvc5Shop.Data.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
     
     public partial class AddErrorTable : DbMigration

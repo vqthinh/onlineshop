@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Xml.Linq;
 using QTMvc5Shop.Model.Abstract;
 
 namespace QTMvc5Shop.Model.Models
