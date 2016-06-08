@@ -13,29 +13,30 @@ namespace QTMvc5Shop.Web.Api
     {
         IPostCategoryService _postCategoryService;
 
-        public PostCategoryController(IErrorService errorService,IPostCategoryService postCategoryService) : base(errorService)
+        public PostCategoryController(IErrorService errorService, IPostCategoryService postCategoryService)
+            : base(errorService)
         {
             _postCategoryService = postCategoryService;
         }
 
-        public HttpResponseMessage Post(HttpRequestMessage request,PostCategory postCategory)
+        public HttpResponseMessage Post(HttpRequestMessage request, PostCategory postCategory)
         {
             return CreateHttpResponse(request, () =>
-             {
-                 HttpResponseMessage response = null;
-                 if (ModelState.IsValid)
-                 {
-                     request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-                 }
-                 else
-                 {
-                     var category =  _postCategoryService.Add(postCategory);
-                     _postCategoryService.Save();
+            {
+                HttpResponseMessage response = null;
+                if (ModelState.IsValid)
+                {
+                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+                else
+                {
+                    var category = _postCategoryService.Add(postCategory);
+                    _postCategoryService.Save();
 
-                     response = request.CreateResponse(HttpStatusCode.Created, category);
-                 }
-                 return response;
-             });
+                    response = request.CreateResponse(HttpStatusCode.Created, category);
+                }
+                return response;
+            });
         }
 
         public HttpResponseMessage Put(HttpRequestMessage request, PostCategory postCategory)
@@ -77,22 +78,18 @@ namespace QTMvc5Shop.Web.Api
                 return response;
             });
         }
+
         [Route("getall")]
         public HttpResponseMessage Get(HttpRequestMessage request, PostCategory postCategory)
         {
             return CreateHttpResponse(request, () =>
             {
-                HttpResponseMessage response = null;
-                if (ModelState.IsValid)
-                {
-                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-                }
-                else
-                {
-                    var listCategory = _postCategoryService.GetAll();
+                request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
-                    response = request.CreateResponse(HttpStatusCode.OK, listCategory);
-                }
+                var listCategory = _postCategoryService.GetAll();
+
+                var response = request.CreateResponse(HttpStatusCode.OK, listCategory);
+
                 return response;
             });
         }
