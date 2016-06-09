@@ -26,5 +26,10 @@ namespace QTMvc5Shop.Web.Controllers
 
             return View();
         }
+
+        public ActionResult Test()
+        {
+            return View();
+        }
     }
 }
