@@ -1,9 +1,10 @@
 ﻿using System.Data.Entity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using QTMvc5Shop.Model.Models;
 
 namespace QTMvc5Shop.Data
 {
-    public class QTMvc5ShopDbContext : DbContext
+    public class QTMvc5ShopDbContext : IdentityDbContext<ApplicationUser>
     {
         public QTMvc5ShopDbContext() : base("QTMvc5ShopDbContext")
         {
@@ -29,8 +30,14 @@ namespace QTMvc5Shop.Data
         public DbSet<VisitorStatistic> VisitorStatistics { get; set; }
         public DbSet<Error> Errors { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        public static QTMvc5ShopDbContext Create()
         {
+            return new QTMvc5ShopDbContext(); 
+        }
+        protected override void OnModelCreating(DbModelBuilder builder)
+        {
+            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId });
+            builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);
         }
     }
 }

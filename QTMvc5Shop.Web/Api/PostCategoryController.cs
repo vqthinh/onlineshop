@@ -6,10 +6,11 @@ using System.Web.Http;
 using QTMvc5Shop.Model.Models;
 using QTMvc5Shop.Service;
 using QTMvc5Shop.Web.Infrastructure.Core;
-using TeduShop.Web.Models;
-using TeduShop.Web.Infrastructure.Extensions;
+using QTMvc5Shop.Web.Infrastructure.Extensions;
+using QTMvc5Shop.Web.Models;
 
-namespace TeduShop.Web.Api
+
+namespace QTMvc5Shop.Web.Api
 {
     [RoutePrefix("api/postcategory")]
     public class PostCategoryController : ApiControllerBase

@@ -1,7 +1,7 @@
 ﻿using QTMvc5Shop.Model.Models;
-using TeduShop.Web.Models;
+using QTMvc5Shop.Web.Models;
 
-namespace TeduShop.Web.Infrastructure.Extensions
+namespace QTMvc5Shop.Web.Infrastructure.Extensions
 {
     public static class EntityExtensions
     {

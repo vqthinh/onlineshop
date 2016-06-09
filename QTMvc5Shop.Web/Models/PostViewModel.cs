@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TeduShop.Web.Models
+namespace QTMvc5Shop.Web.Models
 {
     public class PostViewModel
     {

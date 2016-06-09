@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using QTMvc5Shop.Model.Models;
-using TeduShop.Web.Models;
+using QTMvc5Shop.Web.Models;
 
 namespace QTMvc5Shop.Web.Mappings
 {

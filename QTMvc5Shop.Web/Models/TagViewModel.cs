@@ -1,4 +1,4 @@
-﻿namespace TeduShop.Web.Models
+﻿namespace QTMvc5Shop.Web.Models
 {
     public class TagViewModel
     {
