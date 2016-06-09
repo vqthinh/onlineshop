@@ -8,12 +8,9 @@ namespace QTMvc5Shop.Web.Mappings
     {
         public static void Configure()
         {
-#pragma warning disable 618
             Mapper.CreateMap<Post, PostViewModel>();
             Mapper.CreateMap<PostCategory, PostCategoryViewModel>();
-            Mapper.CreateMap<PostTag, PostTagViewModel>();
             Mapper.CreateMap<Tag, TagViewModel>();
-#pragma warning restore 618
         }
     }
 }

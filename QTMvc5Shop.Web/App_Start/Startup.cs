@@ -14,7 +14,6 @@ using QTMvc5Shop.Data.Infrastructure;
 using QTMvc5Shop.Data.Repositories;
 using QTMvc5Shop.Model.Models;
 using QTMvc5Shop.Service;
-using QTMvc5Shop.Web.App_Start;
 
 [assembly: OwinStartup(typeof(QTMvc5Shop.Web.App_Start.Startup))]
 

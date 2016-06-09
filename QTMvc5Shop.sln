@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QTMvc5Shop.Service", "QTMvc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QTMvc5Shop.UnitTest", "QTMvc5Shop.UnitTest\QTMvc5Shop.UnitTest.csproj", "{4A1876AB-0A3B-4CB6-AA21-302F796EAF5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QTMvc5Shop.Web", "QTMvc5Shop.Web\QTMvc5Shop.Web.csproj", "{8DA00498-22AB-4A6F-BB6E-EBB18C747410}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QTMvc5Shop.Web", "QTMvc5Shop.Web\QTMvc5Shop.Web.csproj", "{6B39CF82-E8C5-43A7-82E0-8297480AA4DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{4A1876AB-0A3B-4CB6-AA21-302F796EAF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A1876AB-0A3B-4CB6-AA21-302F796EAF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A1876AB-0A3B-4CB6-AA21-302F796EAF5C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8DA00498-22AB-4A6F-BB6E-EBB18C747410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8DA00498-22AB-4A6F-BB6E-EBB18C747410}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8DA00498-22AB-4A6F-BB6E-EBB18C747410}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8DA00498-22AB-4A6F-BB6E-EBB18C747410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B39CF82-E8C5-43A7-82E0-8297480AA4DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B39CF82-E8C5-43A7-82E0-8297480AA4DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B39CF82-E8C5-43A7-82E0-8297480AA4DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B39CF82-E8C5-43A7-82E0-8297480AA4DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

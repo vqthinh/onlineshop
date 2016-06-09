@@ -7,7 +7,6 @@ using System.Net.Http;
 using System.Web.Http;
 using QTMvc5Shop.Model.Models;
 using QTMvc5Shop.Service;
-
 namespace QTMvc5Shop.Web.Infrastructure.Core
 {
     public class ApiControllerBase : ApiController

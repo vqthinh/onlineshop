@@ -89,10 +89,6 @@
       <Project>{0d92ec92-e63b-4a44-b8a3-4412da297baa}</Project>
       <Name>QTMvc5Shop.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\QTMvc5Shop.Web\QTMvc5Shop.Web.csproj">
-      <Project>{8da00498-22ab-4a6f-bb6e-ebb18c747410}</Project>
-      <Name>QTMvc5Shop.Web</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
